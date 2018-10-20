@@ -43,4 +43,28 @@ public class WordsCounterTest {
         Assert.assertEquals(0,result);
 
     }
+
+    @Test
+    public void checkIfTwoTimesAddedWordReturnsTwo() {
+
+        wordsCounter.addWord("Mama");
+        wordsCounter.addWord("Mama");
+
+        int result = wordsCounter.howManyTimesWordWasGiven("Mama");
+
+        Assert.assertEquals(2,result);
+    }
+
+    @Test
+
+    public void checkIfAddingWordThreeTimesAndTwoAreSameReturnTwo(){
+        wordsCounter.addWord("Mama");
+        wordsCounter.addWord("Mama");
+        wordsCounter.addWord("Mama2");
+
+        int result = wordsCounter.howManyTimesWordWasGiven("Mama");
+
+        Assert.assertEquals(2,result);
+
+    }
 }

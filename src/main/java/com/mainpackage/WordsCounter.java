@@ -2,7 +2,7 @@ package com.mainpackage;
 
 
 public class WordsCounter {
-    String storedString = "";
+    private String storedString = "";
     private int counter = 0;
     public int howManyTimesWordWasGiven(String input) {
         if(input.equals(storedString)){
@@ -15,6 +15,7 @@ public class WordsCounter {
         if(counter==0){
             storedString=input;
         }
+
         counter++;
     }
 }
