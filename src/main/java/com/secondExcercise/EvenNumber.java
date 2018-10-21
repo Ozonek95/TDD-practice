@@ -1,10 +1,12 @@
 package com.secondExcercise;
 
 public class EvenNumber {
-    public EvenNumber(int evenNumber) {
+    private final int number;
+    public EvenNumber(int number) {
+        this.number = number;
     }
 
     public boolean isEven() {
-        return true;
+        return number % 2 == 0;
     }
 }
