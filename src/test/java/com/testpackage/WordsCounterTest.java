@@ -20,7 +20,7 @@ public class WordsCounterTest {
     public void checkIfWordCounterReturnZero() throws Exception {
         int result = wordsCounter.howManyTimesWordWasGiven("Kot");
 
-        Assert.assertEquals(0,result);
+        Assert.assertEquals(0, result);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class WordsCounterTest {
 
         int result = wordsCounter.howManyTimesWordWasGiven("Kot");
 
-        Assert.assertEquals(1,result);
+        Assert.assertEquals(1, result);
     }
 
     @Test
@@ -40,7 +40,7 @@ public class WordsCounterTest {
 
         int result = wordsCounter.howManyTimesWordWasGiven("Kot");
 
-        Assert.assertEquals(0,result);
+        Assert.assertEquals(0, result);
 
     }
 
@@ -52,7 +52,7 @@ public class WordsCounterTest {
 
         int result = wordsCounter.howManyTimesWordWasGiven("Mama");
 
-        Assert.assertEquals(2,result);
+        Assert.assertEquals(2, result);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class WordsCounterTest {
 
         int result = wordsCounter.howManyTimesWordWasGiven("Mama");
 
-        Assert.assertEquals(2,result);
+        Assert.assertEquals(2, result);
 
     }
 
@@ -77,23 +77,18 @@ public class WordsCounterTest {
 
         int result = wordsCounter.howManyTimesWordWasGiven("kota");
 
-        Assert.assertEquals(1,result);
+        Assert.assertEquals(1, result);
 
     }
 
     @Test
-    public void checkIfEmptyStringReturnZero() {
+    public void checkIfEmptyStringReturnZero() throws Exception {
         wordsCounter.addWord("");
 
-        try {
             int result = wordsCounter.howManyTimesWordWasGiven("");
 
-            Assert.assertEquals(0,result);
+            Assert.assertEquals(0, result);
 
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
 
     }
 
@@ -106,9 +101,8 @@ public class WordsCounterTest {
 
             Assert.fail("Exception wasnt thrown");
 
-        }
-        catch (Exception e){
-            Assert.assertEquals("No space allowed",e.getMessage());
+        } catch (Exception e) {
+            Assert.assertEquals("No space allowed", e.getMessage());
         }
     }
 
